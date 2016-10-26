@@ -38,16 +38,16 @@ $(document).ready(function() {
 				type:"post",
 				url:"registerPro.jsp",
 				data:query,
-				success:function(data) {/*
-					window.location.href("main.jsp");*/
-					alert("성공");
+				success:function(data) {
+//					$(location).attr("href","main.jsp");
+					window.location.href="main.jsp";
 				}
 			});
 		}
 	});
 	
-	$("#cancel").click(function() {/*
-		window.location.href("main.jsp");*/
+	$("#cancel").click(function() {
+		window.location.href="main.jsp";
 	});
 });
 
