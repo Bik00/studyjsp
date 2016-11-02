@@ -5,18 +5,17 @@
 	Connection con = null;
 	ResultSet set = null;
 	try {
-//		String url="jdbc:mariadb://localhost:33060/test";
-//		String id = "jspid";
-//		String pw = "jsppaass";
-//		
-//		Class.forName("org.mariadb.jdbc.Driver");
-//		con = DriverManager.getConnection(url, id, pw);
+/* 		String url="jdbc:mariadb://localhost:33060/test";
+		String id = "jspid";
+		String pw = "jsppass";	
+		Class.forName("org.mariadb.jdbc.Driver");
+		con = DriverManager.getConnection(url, id, pw); */
 		
 		
-		Context initCtx = new InitialContext(); 
+ 		Context initCtx = new InitialContext(); 
 		Context envCtx = (Context) initCtx.lookup("java:comp/env"); 
 		DataSource ds = (DataSource)envCtx.lookup("jdbc/TestDB"); 
-		con = ds.getConnection();
+		con = ds.getConnection(); 
 		if (con != null) 
 	 	{
 	 		out.println("MariaDB Connected <br>");
