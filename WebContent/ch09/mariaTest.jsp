@@ -12,10 +12,10 @@
 		con = DriverManager.getConnection(url, id, pw); */
 		
 		
- 		Context initCtx = new InitialContext(); 
+  		Context initCtx = new InitialContext(); 
 		Context envCtx = (Context) initCtx.lookup("java:comp/env"); 
 		DataSource ds = (DataSource)envCtx.lookup("jdbc/TestDB"); 
-		con = ds.getConnection(); 
+		con = ds.getConnection();  
 		if (con != null) 
 	 	{
 	 		out.println("MariaDB Connected <br>");

@@ -7,7 +7,7 @@
 <bikoo:forEach var="head" items="${headerValues}">
 	<p>param: <bikoo:out value="${head.key}" />
 	<p>values:
-		<bikoo:Each var="val" items="${head.value}">
-		<bikoo.out value="${val}"/>
-	</bikoo:Each>
+		<bikoo:forEach var="val" items="${head.value}">
+		<bikoo:out value="${val}"/>
+	</bikoo:forEach>
 </bikoo:forEach>
